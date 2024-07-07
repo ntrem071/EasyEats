@@ -1,16 +1,29 @@
 {
   "files": {
-    "main.css": "/EasyEats/static/css/main.c748f1c7.css",
-    "main.js": "/EasyEats/static/js/main.e90596e3.js",
+    "main.css": "/EasyEats/static/css/main.1815a72a.css",
+    "main.js": "/EasyEats/static/js/main.66b4505e.js",
     "static/js/453.ad6eb26e.chunk.js": "/EasyEats/static/js/453.ad6eb26e.chunk.js",
-    "static/media/logo.svg": "/EasyEats/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/r1.png": "/EasyEats/static/media/r1.21f14672811f881924bd.png",
+    "static/media/ingredients.png": "/EasyEats/static/media/ingredients.b87b5cd07e4ad59fe88b.png",
+    "static/media/c3.png": "/EasyEats/static/media/c3.9cbde6ec7e4d3f9e671f.png",
+    "static/media/r7.png": "/EasyEats/static/media/r7.6c2649811f89aa2885a6.png",
+    "static/media/r2.png": "/EasyEats/static/media/r2.7207318965480bc61216.png",
+    "static/media/c2.png": "/EasyEats/static/media/c2.99c5cc71c0e230982fb3.png",
+    "static/media/r8.png": "/EasyEats/static/media/r8.40a3695b2d5db6f4dcdb.png",
+    "static/media/c4.png": "/EasyEats/static/media/c4.3d5a47f190b81ac2599c.png",
+    "static/media/r5.png": "/EasyEats/static/media/r5.55de2b960bac476d2894.png",
+    "static/media/r4.png": "/EasyEats/static/media/r4.7081cd5a975931cbabcb.png",
+    "static/media/r6.png": "/EasyEats/static/media/r6.f5f6e81089fcb12a4d48.png",
+    "static/media/r3.png": "/EasyEats/static/media/r3.dba8c3d3691ac23ebd89.png",
+    "static/media/c1.png": "/EasyEats/static/media/c1.97265501dca4bfc477e0.png",
+    "static/media/1609972.png": "/EasyEats/static/media/1609972.fd149cb5b627d177090a.png",
     "index.html": "/EasyEats/index.html",
-    "main.c748f1c7.css.map": "/EasyEats/static/css/main.c748f1c7.css.map",
-    "main.e90596e3.js.map": "/EasyEats/static/js/main.e90596e3.js.map",
+    "main.1815a72a.css.map": "/EasyEats/static/css/main.1815a72a.css.map",
+    "main.66b4505e.js.map": "/EasyEats/static/js/main.66b4505e.js.map",
     "453.ad6eb26e.chunk.js.map": "/EasyEats/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c748f1c7.css",
-    "static/js/main.e90596e3.js"
+    "static/css/main.1815a72a.css",
+    "static/js/main.66b4505e.js"
   ]
 }
