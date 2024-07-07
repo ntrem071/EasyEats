@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/EasyEats/static/css/main.1815a72a.css",
-    "main.js": "/EasyEats/static/js/main.66b4505e.js",
+    "main.js": "/EasyEats/static/js/main.1770561a.js",
     "static/js/453.ad6eb26e.chunk.js": "/EasyEats/static/js/453.ad6eb26e.chunk.js",
     "static/media/r1.png": "/EasyEats/static/media/r1.21f14672811f881924bd.png",
     "static/media/ingredients.png": "/EasyEats/static/media/ingredients.b87b5cd07e4ad59fe88b.png",
@@ -19,11 +19,11 @@
     "static/media/1609972.png": "/EasyEats/static/media/1609972.fd149cb5b627d177090a.png",
     "index.html": "/EasyEats/index.html",
     "main.1815a72a.css.map": "/EasyEats/static/css/main.1815a72a.css.map",
-    "main.66b4505e.js.map": "/EasyEats/static/js/main.66b4505e.js.map",
+    "main.1770561a.js.map": "/EasyEats/static/js/main.1770561a.js.map",
     "453.ad6eb26e.chunk.js.map": "/EasyEats/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1815a72a.css",
-    "static/js/main.66b4505e.js"
+    "static/js/main.1770561a.js"
   ]
 }
