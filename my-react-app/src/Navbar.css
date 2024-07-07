@@ -1,0 +1,122 @@
+.active{
+    background-color: #ffa41c;
+    border: 0.1rem #a76c13 solid;
+}
+  
+nav{
+    position: sticky;
+    top:0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fbfa92;
+    border-bottom: 4px black solid;
+    z-index: 3;
+}
+
+nav ul{
+    display: flex;
+    position: sticky;
+    top:0;
+}
+nav li{
+    list-style: none;
+}
+.nav-title{
+    display: flex;
+    align-items: center;
+}
+.nav-title img{
+    margin-left: 1rem;
+}
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: black; 
+    padding: 0.5rem;
+    margin: 0 1rem 0 0;
+    border-radius: 0.5rem;
+    width: 80px;
+}
+nav ul li a:not(.active):hover{
+    background-color: rgba(0, 0, 0, 0.074);
+}
+.nav-logo{
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+
+nav .menu{
+    display: none;
+    position: absolute;
+    top:1rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+nav .menu span{
+    height: 0.4rem;
+    width:100%;
+    background-color: black;
+    border-radius: 0.2rem;
+    transition: .3s ease;
+}
+
+@media (max-width:760px) {
+    nav .menu{
+        display: flex;
+    }
+    nav{
+        flex-direction: column;
+        align-items: start;
+    }
+    .top-bar{
+        width: 100%;
+        position: sticky;
+        z-index: 3;
+        background-color: #fbfa92;
+        border-bottom: 4px black solid;
+    }
+    nav ul{
+        padding: 0;
+        margin: 0;  
+        position: absolute;   
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+        background-color: #fbfa92;
+        border-bottom: 2px black solid;
+        transition: .3s ease;
+        transform: translateY(-100%);
+        z-index: 1;
+    }
+    nav ul.open{ 
+        transform: translateY(calc(50% + 2px));
+    }
+
+    nav ul li{
+        width:100%;
+        text-align: center;
+    }
+    nav ul li a{
+        margin: 0.2rem 0.5rem;
+        width: calc(100% - 2rem);
+    }
+
+    .menu.open span:nth-child(1) {
+        transform: translate(0, 200%) rotate(45deg);
+    }
+    .menu.open span:nth-child(2) {
+        display: none;
+    }
+    .menu.open span:nth-child(3) {
+        transform: translate(0, -200%) rotate(-45deg);
+    }
+    
+}
