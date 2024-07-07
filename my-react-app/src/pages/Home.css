@@ -1,0 +1,52 @@
+.ad-home{
+    position: relative;
+}
+.ad-home section{
+    position: absolute;
+    bottom: 5vw;
+    right: 5vw;
+    background-color: #fbfa92;
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    min-height: fit-content;
+    padding: 2vw;
+}
+.ad-home div{
+    position: relative;
+
+}
+.ad-home div img{
+    max-height: 50vh;
+    min-height: 350px;
+    object-fit: cover;
+}
+.ad-home section h1{
+    margin: 0;
+    font-weight: 400;
+    font-size: 35px;
+}
+.ad-home section h4{
+    margin: 5px;
+    font-weight: 400;
+    font-size: 20px;
+}
+button{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    margin: 1vw;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 10px;
+}
+button:hover{
+    background-color: #ffa41c;
+    color: black;
+}
+
+.body-h{
+    padding: 0 3vw;
+    text-align: left;
+}
+

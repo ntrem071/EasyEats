@@ -1,0 +1,192 @@
+.recipes {
+    padding: 0 3vw 20px 3vw;
+    text-align: left;
+  }
+
+
+.star-rating-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.rating-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+.rating-link:hover {
+    background-color: #f0f0f0;
+  }
+  
+.star-rating-links .star {
+    font-size: 24px;
+    color: #ccc; 
+    margin-right: 5px;
+  }
+  
+.star-rating-links .star.filled {
+    color: #ffa41c; 
+  }
+  
+.rating-text {
+    margin-left: 10px;
+  }
+  
+.clear-rating-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding-left: 10px;
+    color: #007bff; 
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+.clear-rating-link:hover {
+    color: #0056b3; 
+    text-decoration: none;
+  }
+
+  .rp2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 64%;
+    position: relative;
+    background-color: white;
+    border-color: white;
+    justify-content: flex-start;
+  }
+  
+  .search-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    height: 30px;
+    display: flex;
+  }
+  .search-icon{
+    height: 100%;
+    margin: 0 15px;
+    color: #6f6d6d;
+  }
+  #search {
+    border: none;
+    height: 100%;
+    width: calc(100% - 50px);
+    padding: 0;
+  }  
+  #search:focus {
+    outline: none; 
+    border: none;  
+  }
+
+
+
+
+
+
+
+.user-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 38px;
+  width: 100%;
+}
+
+.user-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.user-card {
+  position: relative;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.user-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  height: 20vw;
+}
+
+.user-card h2 {
+  margin: 10px 0 0 0;
+  font-size: 1.2em;
+  padding: 0 10px;
+}
+
+.user-card .rating {
+  color: #f39c12;
+  padding: 0 10px;
+}
+
+.user-card .duration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.7em;
+  padding: 5px 10px;
+  text-align: right;
+  color: #555;
+}
+
+.user-card a {
+  font-size: 12px;
+  padding: 0 10px 25px 10px;
+  color: #007bff;
+  border-radius: 4px;
+}
+
+
+
+
+.pagination {
+  display: flex;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 0px;
+  margin: 0;
+  font-size: 15px;
+}
+
+.pagination button.active {
+  background-color: #e9ecef;
+  color: #8c8b8b;
+}
+@media (max-width: 760px) {
+  .user-cards {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .star-rating-links .star {
+    font-size: 20px;
+    margin-right: -5px;
+  }
+  .rating-text{
+    font-size: 12px;
+  }
+
+}

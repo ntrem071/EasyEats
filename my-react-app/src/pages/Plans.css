@@ -1,0 +1,255 @@
+.plans {
+    padding: 0 3vw 20px 3vw;
+    text-align: left;
+  }
+  
+  .wrap-selection {
+    display: flex;
+    border-top: 1px #000 solid;
+    padding-top: 10px;
+    gap: 1%;
+  }
+  
+  .lp {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+  }
+  .accordion {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden; 
+  }
+  
+  .accordion-item:first-child {
+    border-top: none;
+  }
+  
+  .accordion-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 15px;
+    cursor: pointer;
+    background-color: #fbfa92;
+    border: 1px solid #000000;
+  }
+  
+  .accordion-title h3 {
+    margin: 0;
+  }
+  
+  .accordion-content {
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  }
+  
+  .accordion-content.open {
+    max-height: 400px; 
+    padding: 15px;
+  }
+  
+  .form-options {
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .form-options label {
+    margin-bottom: 8px;
+  }
+
+  .form-options input[type="checkbox"],
+  .form-options input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffa41c;
+    outline: none;
+    vertical-align: middle;
+    margin-right: 8px;
+    position: relative;
+    border-radius: 20%;
+  }
+  
+  .form-options input[type="checkbox"]::after {
+    content: '\2713';
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .form-options input[type="radio"] {
+    border-radius: 50%;
+  }
+  
+  .form-options input[type="radio"]:checked, 
+  .form-options input[type="checkbox"]:checked {
+    background-color: #ffa41c;
+  }
+
+  .rp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5vw;
+    width: 64%;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+  }
+  
+  .wrap-switch1 {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 10px;
+    width: 100%; 
+  }
+  
+  .wrap-switch1 label {
+    display: flex;
+    align-self: center;
+    width: 30%;
+  }
+  
+  .switch-container {
+    display: flex;
+    align-items: center;
+    width: 70%; 
+  }
+  
+  .switch-button {
+    flex: 1; 
+    background-color: #fff;
+    color: #ffa41c;
+    border: 2px #ffa41c solid;
+    border-radius: 0;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0;
+    transition: background-color 0.3s ease;
+    text-align: center; 
+  }
+  
+  .switch-button:hover {
+    background-color: #fff;
+    color: #ffa41c; 
+  }
+  
+  .switch-button.active {
+    background-color: #ffa41c;
+    color: #fff;
+    border-radius: 4px;
+    transform: scale(1.05);
+  }
+
+
+  .order-summary {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: calc(100% - 40px);
+    margin: 20px auto;
+  }
+
+  .order-summary h2 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .order-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .order-details li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .order-details .total {
+    font-weight: bold;
+    border-top: 1px black solid;
+    padding-top: 10px;
+  }
+
+  .order-details .discount {
+    color: #ff6347;
+  }
+
+  .btn-pay{
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px 10px;
+    width: 60%;
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000; 
+  }
+  
+  .popup-content {
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    max-width: 100%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 4px 15px 8px 15px;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 3px;
+    color: #333;
+  }  
+  .close:hover {
+    background-color: #ffa41c;    
+  }  
+
+  .popup-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .popup-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+
