@@ -24,7 +24,7 @@ export const Navbar = () => {
         <li><NavLink to="/EasyEats/plan">Plans</NavLink></li>
         <li><NavLink to="/EasyEats/recipe">Recipes</NavLink></li>
         <li><NavLink to="/EasyEats/faq">FAQs</NavLink></li>
-    </ul>z
+    </ul>
   </nav>
 
 
