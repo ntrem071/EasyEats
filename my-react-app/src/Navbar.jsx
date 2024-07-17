@@ -12,7 +12,7 @@ export const Navbar = () => {
     <div className='top-bar'>
         <div className='nav-title'>
             <img src={logo} width="50" height="50" />      
-            <Link to="/EasyEats" className="nav-logo">Easy Eats</Link>        
+            <Link to="/EasyEats/" className="nav-logo">Easy Eats</Link>        
         </div>
         <div className={`menu ${menuOpen ? 'open' : ''}`}  onClick={() => {setMenuOpen(!menuOpen)}}>
             <span></span>
