@@ -12,7 +12,7 @@ export const Navbar = () => {
     <div className='top-bar'>
         <div className='nav-title'>
             <img src={logo} width="50" height="50" />      
-            <Link to="/" className="nav-logo">Easy Eats</Link>        
+            <Link to="/EasyEats/" className="nav-logo">Easy Eats</Link>        
         </div>
         <div className={`menu ${menuOpen ? 'open' : ''}`}  onClick={() => {setMenuOpen(!menuOpen)}}>
             <span></span>
@@ -21,9 +21,9 @@ export const Navbar = () => {
         </div>        
     </div>
     <ul className={menuOpen ? "open" : ""} >    
-        <li><NavLink to="/plan">Plans</NavLink></li>
-        <li><NavLink to="/recipe">Recipes</NavLink></li>
-        <li><NavLink to="/faq">FAQs</NavLink></li>
+        <li><NavLink to="/EasyEats/plan">Plans</NavLink></li>
+        <li><NavLink to="/EasyEats/recipe">Recipes</NavLink></li>
+        <li><NavLink to="/EasyEats/faq">FAQs</NavLink></li>
     </ul>
   </nav>
 
