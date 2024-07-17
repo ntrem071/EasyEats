@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import './Recipes.css';
 import { FaSearch } from "react-icons/fa";
-import { Link } from 'react-router-dom';
 
 import r1 from '../img/r1.png';
 import r2 from '../img/r2.png';
@@ -312,36 +311,32 @@ export const Recipes = () => {
             carbs: '50g'
         }
     },
-];
+  ];
 
-const cardsPerPage = 6; // 2 rows x 3 columns
-let currentPage = 1;
+  const cardsPerPage = 6; // 2 rows x 3 columns
+  let currentPage = 1;
 
-function renderRecipeCards(page) {
-  const userCardsContainer = document.getElementById('user-cards');
-  userCardsContainer.innerHTML = ''; // Clear previous cards
+  function renderRecipeCards(page) {
+    const userCardsContainer = document.getElementById('user-cards');
+    userCardsContainer.innerHTML = ''; // Clear previous cards
 
-  const start = (page - 1) * cardsPerPage;
-  const end = start + cardsPerPage;
-  const cardsToShow = recipeCardsData.slice(start, end);
+    const start = (page - 1) * cardsPerPage;
+    const end = start + cardsPerPage;
+    const cardsToShow = recipeCardsData.slice(start, end);
 
-  cardsToShow.forEach(recipe => {
-    const card = document.createElement('div');
-    card.className = 'user-card';
-    card.innerHTML = `
-      <img src="${recipe.image}" alt="${recipe.title}">
-      <h2>${recipe.title}</h2>
-      <div class="rating">${recipe.rating}</div>
-          <li>
-            <Link to={${recipe.id}}>{recipe.name}</Link>
-          </li>
-      <div class="duration">${recipe.duration}</div>
-
-    `;
-    userCardsContainer.appendChild(card);
-  });
-}
-
+    cardsToShow.forEach(recipe => {
+      const card = document.createElement('div');
+      card.className = 'user-card';
+      card.innerHTML = `
+        <img src="${recipe.image}" alt="${recipe.title}">
+        <h2>${recipe.title}</h2>
+        <div class="rating">${recipe.rating}</div>
+        <a href="${recipe.link}">See Recipe</a>
+        <div class="duration">${recipe.duration}</div>
+      `;
+      userCardsContainer.appendChild(card);
+    });
+  }
 
 
 function renderPagination() {
