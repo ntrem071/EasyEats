@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import './Recipes.css';
 import { FaSearch } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 import r1 from '../img/r1.png';
 import r2 from '../img/r2.png';
@@ -330,15 +331,13 @@ function renderRecipeCards(page) {
     card.innerHTML = `
       <img src="${recipe.image}" alt="${recipe.title}">
       <h2>${recipe.title}</h2>
-      <div class="rating">${recipe.rating}</div>
-      <a onClick={() => navigate(${recipe.link})}>See Recipe</a>
+      <a href="https://ntrem071.github.io${recipe.link}" >See Recipe</a>
       <div class="duration">${recipe.duration}</div>
 
     `;
     userCardsContainer.appendChild(card);
   });
 }
-
 
 
 function renderPagination() {
