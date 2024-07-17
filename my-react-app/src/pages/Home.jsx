@@ -34,7 +34,7 @@ export const Home = () => {
           <h4>Get an exclusive</h4>
           <h1>20% off</h1>
           <h4>your first order!</h4>
-          <button onClick={() => navigate('/plan')}>Browse Plans</button>
+          <button onClick={() => navigate('/EasyEats/plan')}>Browse Plans</button>
         </section>
       </div>
       <div className="body-h">
