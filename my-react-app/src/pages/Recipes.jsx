@@ -332,7 +332,7 @@ function renderRecipeCards(page) {
       <img src="${recipe.image}" alt="${recipe.title}">
       <h2>${recipe.title}</h2>
       <NavLink to="${recipe.link}">See Recipe</NavLink>
-      <a href="${recipe.link}" >See Recipe</a>
+      <a href="#${recipe.link}" >See Recipe</a>
       <div class="duration">${recipe.duration}</div>
 
     `;
