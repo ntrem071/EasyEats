@@ -6,9 +6,9 @@ import { Home, Plans, Recipes, Faq, Meal } from './pages';
 function App() {
   return (
     <div className="App">
-      <Router basename="/EasyEats">
+      <Router >
         <Navbar />
-        <Routes>
+        <Routes basename="/EasyEats">
           <Route path="/" element={<Home />} />
           <Route path="/plan" element={<Plans />} />
           <Route path="/recipe" element={<Recipes />} />
