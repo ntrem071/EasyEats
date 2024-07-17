@@ -9,7 +9,7 @@ function App() {
       <Router >
         <Navbar />
         <Routes basename="/EasyEats">
-          <Route path="/" element={<Home />} />
+          <Route path="/EasyEats/" element={<Home />} />
           <Route path="/plan" element={<Plans />} />
           <Route path="/recipe" element={<Recipes />} />
           <Route path="/faq" element={<Faq />} />
