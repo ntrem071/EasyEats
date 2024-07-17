@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import './Recipes.css';
 import { FaSearch } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import r1 from '../img/r1.png';
 import r2 from '../img/r2.png';
@@ -331,7 +331,8 @@ function renderRecipeCards(page) {
     card.innerHTML = `
       <img src="${recipe.image}" alt="${recipe.title}">
       <h2>${recipe.title}</h2>
-      <a href="https://ntrem071.github.io${recipe.link}" >See Recipe</a>
+      <NavLink to="${recipe.link}">See Recipe</NavLink>
+      <a href="${recipe.link}" >See Recipe</a>
       <div class="duration">${recipe.duration}</div>
 
     `;
@@ -420,6 +421,7 @@ function renderPagination() {
   return (
     <body className='recipes'>
       <h2>BROWSE OUR MEALS</h2>
+      <NavLink to='/EasyEats/recipes/meal/1' >See Recipe</NavLink>
       <p>
         See our wide array of recipes and cuisines to help with your meal prep.
       </p>
