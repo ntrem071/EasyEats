@@ -34,7 +34,7 @@ export const Recipes = () => {
         title: 'Spaghetti Carbonara',
         image: r1,
         rating: '★★★★☆',
-        link: '/EasyEats/recipes/meal/1',
+        link: '/recipes/meal/1',
         duration: '30 mins',
         ingredients: [
             '200g spaghetti',
@@ -67,7 +67,7 @@ export const Recipes = () => {
         title: 'Chicken Alfredo',
         image: r2,
         rating: '★★★☆☆',
-        link: '/EasyEats/recipes/meal/2',
+        link: '/recipes/meal/2',
         duration: '45 mins',
         ingredients: [
             '200g fettuccine pasta',
@@ -103,7 +103,7 @@ export const Recipes = () => {
         title: 'Beef Stroganoff',
         image: r3,
         rating: '★★★★★',
-        link: '/EasyEats/recipes/meal/3',
+        link: '/recipes/meal/3',
         duration: '40 mins',
         ingredients: [
             '500g beef sirloin, sliced into thin strips',
@@ -141,7 +141,7 @@ export const Recipes = () => {
         title: 'Vegetable Stir Fry',
         image: r4,
         rating: '★★★★☆',
-        link: '/EasyEats/recipes/meal/4',
+        link: '/recipes/meal/4',
         duration: '25 mins',
         ingredients: [
             '2 tbsp olive oil',
@@ -177,7 +177,7 @@ export const Recipes = () => {
         title: 'Tacos',
         image: r5,
         rating: '★★★☆☆',
-        link: '/EasyEats/recipes/meal/5',
+        link: '/recipes/meal/5',
         duration: '20 mins',
         ingredients: [
             '8 small corn tortillas',
@@ -215,7 +215,7 @@ export const Recipes = () => {
         title: 'Caesar Salad',
         image: r6,
         rating: '★★★★☆',
-        link: '/EasyEats/recipes/meal/6',
+        link: '/recipes/meal/6',
         duration: '15 mins',
         ingredients: [
             '2 romaine lettuce hearts, chopped',
@@ -243,7 +243,7 @@ export const Recipes = () => {
         title: 'Baked Salmon',
         image: r7,
         rating: '★★★★★',
-        link: '/EasyEats/recipes/meal/7',
+        link: '/recipes/meal/7',
         duration: '35 mins',
         ingredients: [
             '4 salmon fillets',
@@ -274,7 +274,7 @@ export const Recipes = () => {
         title: 'Lasagna',
         image: r8,
         rating: '★★★☆☆',
-        link: '/EasyEats/recipes/meal/8',
+        link: '/recipes/meal/8',
         duration: '1 hr',
         ingredients: [
             '9 lasagna noodles',
