@@ -15,10 +15,6 @@ import r8 from '../img/r8.png';
 
 export const Recipes = () => {
 
-  useEffect(() => {
-    renderRecipeCards(currentPage);
-    renderPagination();
-  }, []); 
 
   const navigate = useNavigate(); 
   const [openIndexes, setOpenIndexes] = useState({ 0: true, 1: true, 2: true, 3: true});
@@ -314,53 +310,19 @@ export const Recipes = () => {
     },
 ];
 
-const cardsPerPage = 6; // 2 rows x 3 columns
-let currentPage = 1;
 
-function renderRecipeCards(page) {
-  const userCardsContainer = document.getElementById('user-cards');
-  userCardsContainer.innerHTML = ''; // Clear previous cards
+const RecipeCard = ({ recipe }) => {
+  return (
+      <div className="user-card">
+          <img src={recipe.image} alt={recipe.title} />
+          <h2>{recipe.title}</h2>
+          <div className="rating">{recipe.rating}</div>
+          <NavLink to={recipe.link}>See Recipe</NavLink>
+          <div className="duration">{recipe.duration}</div>
+      </div>
+  );
+};
 
-  const start = (page - 1) * cardsPerPage;
-  const end = start + cardsPerPage;
-  const cardsToShow = recipeCardsData.slice(start, end);
-
-  cardsToShow.forEach(recipe => {
-    const card = document.createElement('div');
-    card.className = 'user-card';
-    card.innerHTML = `
-      <img src="${recipe.image}" alt="${recipe.title}">
-      <h2>${recipe.title}</h2>
-      <div class="rating">${recipe.rating}</div>
-      <NavLink to="${recipe.link}" >See Recipe</NavLink>
-      <div class="duration">${recipe.duration}</div>
-
-    `;
-    userCardsContainer.appendChild(card);
-  });
-}
-
-
-
-function renderPagination() {
-  const paginationContainer = document.getElementById('pagination');
-  paginationContainer.innerHTML = ''; // Clear previous pagination
-
-  const totalPages = Math.ceil(recipeCardsData.length / cardsPerPage);
-
-  for (let i = 1; i <= totalPages; i++) {
-    const button = document.createElement('button');
-    button.innerText = i;
-    button.className = i === currentPage ? 'active' : '';
-    button.disabled = i === currentPage;
-    button.addEventListener('click', () => {
-      currentPage = i;
-      renderRecipeCards(currentPage);
-      renderPagination();
-    });
-    paginationContainer.appendChild(button);
-  }
-}
 
   const handleAccordionClick = (index) => {
     setOpenIndexes((prevIndexes) => ({
@@ -422,10 +384,11 @@ function renderPagination() {
   return (
     <body className='recipes'>
       <h2>BROWSE OUR MEALS</h2>
-      <a href="/EasyEats/recipes/meal/8" >See Recipe</a>
+     
       <p>
         See our wide array of recipes and cuisines to help with your meal prep.
-      </p>
+      </p> 
+      <NavLink to="/EasyEats/recipes/meal/8" >View Broken Link Content</NavLink>
       <div className='wrap-selection'>
         <div className="lp">
           <div className="accordion">
@@ -666,7 +629,9 @@ function renderPagination() {
               </div>
               <div className="user-cards-container">
                 <div className="user-cards" id="user-cards">
-
+                    {recipeCardsData.map((recipe, index) => (
+                    <RecipeCard key={index} recipe={recipe} />
+                ))}
                 </div>
                 <div className="pagination" id="pagination">
 
