@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import './Recipes.css';
 import { FaSearch } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import r1 from '../img/r1.png';
 import r2 from '../img/r2.png';
@@ -332,7 +332,7 @@ function renderRecipeCards(page) {
       <img src="${recipe.image}" alt="${recipe.title}">
       <h2>${recipe.title}</h2>
       <div class="rating">${recipe.rating}</div>
-      <Link to=${recipe.link}>See Recipe</Link>
+      <NavLink to="${recipe.link}" >See Recipe</NavLink>
       <div class="duration">${recipe.duration}</div>
 
     `;
@@ -422,6 +422,7 @@ function renderPagination() {
   return (
     <body className='recipes'>
       <h2>BROWSE OUR MEALS</h2>
+      <a href="/EasyEats/recipes/meal/8" >See Recipe</a>
       <p>
         See our wide array of recipes and cuisines to help with your meal prep.
       </p>
