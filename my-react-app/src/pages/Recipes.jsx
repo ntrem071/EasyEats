@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import './Recipes.css';
 import { FaSearch } from "react-icons/fa";
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import r1 from '../img/r1.png';
 import r2 from '../img/r2.png';
@@ -35,7 +35,7 @@ export const Recipes = () => {
         title: 'Spaghetti Carbonara',
         image: r1,
         rating: '★★★★☆',
-        link: '/EasyEats/recipes/meal/1',
+        link: './recipes/meal/1',
         duration: '30 mins',
         ingredients: [
             '200g spaghetti',
@@ -68,7 +68,7 @@ export const Recipes = () => {
         title: 'Chicken Alfredo',
         image: r2,
         rating: '★★★☆☆',
-        link: '/EasyEats/recipes/meal/2',
+        link: './recipes/meal/2',
         duration: '45 mins',
         ingredients: [
             '200g fettuccine pasta',
@@ -104,7 +104,7 @@ export const Recipes = () => {
         title: 'Beef Stroganoff',
         image: r3,
         rating: '★★★★★',
-        link: '/EasyEats/recipes/meal/3',
+        link: './recipes/meal/3',
         duration: '40 mins',
         ingredients: [
             '500g beef sirloin, sliced into thin strips',
@@ -142,7 +142,7 @@ export const Recipes = () => {
         title: 'Vegetable Stir Fry',
         image: r4,
         rating: '★★★★☆',
-        link: '/EasyEats/recipes/meal/4',
+        link: './recipes/meal/4',
         duration: '25 mins',
         ingredients: [
             '2 tbsp olive oil',
@@ -178,7 +178,7 @@ export const Recipes = () => {
         title: 'Tacos',
         image: r5,
         rating: '★★★☆☆',
-        link: '/EasyEats/recipes/meal/5',
+        link: './recipes/meal/5',
         duration: '20 mins',
         ingredients: [
             '8 small corn tortillas',
@@ -216,7 +216,7 @@ export const Recipes = () => {
         title: 'Caesar Salad',
         image: r6,
         rating: '★★★★☆',
-        link: '/EasyEats/recipes/meal/6',
+        link: './recipes/meal/6',
         duration: '15 mins',
         ingredients: [
             '2 romaine lettuce hearts, chopped',
@@ -244,7 +244,7 @@ export const Recipes = () => {
         title: 'Baked Salmon',
         image: r7,
         rating: '★★★★★',
-        link: '/EasyEats/recipes/meal/7',
+        link: './recipes/meal/7',
         duration: '35 mins',
         ingredients: [
             '4 salmon fillets',
@@ -275,7 +275,7 @@ export const Recipes = () => {
         title: 'Lasagna',
         image: r8,
         rating: '★★★☆☆',
-        link: '/EasyEats/recipes/meal/8',
+        link: './recipes/meal/8',
         duration: '1 hr',
         ingredients: [
             '9 lasagna noodles',
@@ -331,14 +331,15 @@ function renderRecipeCards(page) {
     card.innerHTML = `
       <img src="${recipe.image}" alt="${recipe.title}">
       <h2>${recipe.title}</h2>
-      <NavLink to="${recipe.link}">See Recipe</NavLink>
-      <a href="#${recipe.link}" >See Recipe</a>
+      <div class="rating">${recipe.rating}</div>
+      <a href="${recipe.link}" >See Recipe</a>
       <div class="duration">${recipe.duration}</div>
 
     `;
     userCardsContainer.appendChild(card);
   });
 }
+
 
 
 function renderPagination() {
@@ -421,7 +422,6 @@ function renderPagination() {
   return (
     <body className='recipes'>
       <h2>BROWSE OUR MEALS</h2>
-      <NavLink to='/EasyEats/recipes/meal/1' >See Recipe</NavLink>
       <p>
         See our wide array of recipes and cuisines to help with your meal prep.
       </p>
