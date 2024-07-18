@@ -332,7 +332,7 @@ function renderRecipeCards(page) {
       <img src="${recipe.image}" alt="${recipe.title}">
       <h2>${recipe.title}</h2>
       <div class="rating">${recipe.rating}</div>
-      <a href="${recipe.link}" >See Recipe</a>
+      <Link to=${recipe.link}>See Recipe</Link>
       <div class="duration">${recipe.duration}</div>
 
     `;
