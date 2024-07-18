@@ -323,6 +323,18 @@ const RecipeCard = ({ recipe }) => {
   );
 };
 
+const cardsPerPage = 6;
+const [currentPage, setCurrentPage] = useState(1);
+
+// Calculate which recipes to show based on the current page
+const indexOfLastCard = currentPage * cardsPerPage;
+const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+const currentCards = recipeCardsData.slice(indexOfFirstCard, indexOfLastCard);
+
+
+// Handle pagination button click
+const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
 
   const handleAccordionClick = (index) => {
     setOpenIndexes((prevIndexes) => ({
@@ -384,11 +396,9 @@ const RecipeCard = ({ recipe }) => {
   return (
     <body className='recipes'>
       <h2>BROWSE OUR MEALS</h2>
-     
       <p>
         See our wide array of recipes and cuisines to help with your meal prep.
       </p> 
-      <NavLink to="/EasyEats/recipes/meal/8" >View Broken Link Content</NavLink>
       <div className='wrap-selection'>
         <div className="lp">
           <div className="accordion">
@@ -629,12 +639,26 @@ const RecipeCard = ({ recipe }) => {
               </div>
               <div className="user-cards-container">
                 <div className="user-cards" id="user-cards">
-                    {recipeCardsData.map((recipe, index) => (
-                    <RecipeCard key={index} recipe={recipe} />
-                ))}
+                  {currentCards.map((recipe) => (
+                    <div className='user-card' key={recipe.id}>
+                      <img src={recipe.image} alt={recipe.title} />
+                      <h2>{recipe.title}</h2>
+                      <div className='rating'>{recipe.rating}</div>
+                      <NavLink to={recipe.link}>See Recipe</NavLink>
+                      <div className='duration'>{recipe.duration}</div>
+                    </div>
+                  ))}
                 </div>
                 <div className="pagination" id="pagination">
-
+                  {Array.from({ length: Math.ceil(recipeCardsData.length / cardsPerPage) }, (_, index) => (
+                    <button
+                      key={index + 1}
+                      className={currentPage === index + 1 ? 'active' : ''}
+                      onClick={() => paginate(index + 1)}
+                    >
+                      {index + 1}
+                    </button>
+                  ))}
                 </div>
               </div>
         </div>
