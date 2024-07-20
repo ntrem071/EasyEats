@@ -11,6 +11,7 @@
     flex-direction: column;
     min-height: fit-content;
     padding: 2vw;
+    border-radius: 7px;
 }
 .ad-home div{
     position: relative;
@@ -37,7 +38,7 @@ button{
     font-size: 20px;
     margin: 1vw;
     margin-bottom: 10px;
-    border-radius: 20px;
+    border-radius: 7px;
     padding: 10px;
 }
 button:hover{
@@ -50,3 +51,51 @@ button:hover{
     text-align: left;
 }
 
+
+.icon-containor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+}
+.icon-card{
+    border: solid 1px #ffa41c;
+    border-radius: 5px;;
+    flex-basis: 20%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.icon-card:hover{
+    background-color: #ffa41c;
+}
+.icon-card:hover hr {
+    border-color: rgb(248, 248, 248);
+}
+.icon-card:hover p {
+    color: rgb(248, 248, 248);
+}
+.icon-card:hover .icon-perk {
+    color: rgb(248, 248, 248);
+}
+.icon-card hr{
+    width: 100%;
+    border: 2px solid #ffa41c;
+}
+.icon-card p{
+    font-size: 20px;
+    color:#917a58;
+    margin: 0;
+    text-align: center;
+}
+.icon-perk{
+    font-size: 100px;
+    color:#ffa41c;
+}

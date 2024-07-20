@@ -174,7 +174,7 @@
 }
 
 .pagination button.active {
-  background-color: #e9ecef;
+  background-color: #f39c12;
   color: #8c8b8b;
 }
 @media (max-width: 760px) {
@@ -189,4 +189,14 @@
     font-size: 12px;
   }
 
+}
+
+.no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }

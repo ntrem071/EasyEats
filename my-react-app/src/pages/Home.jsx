@@ -7,6 +7,11 @@ import c4 from '../img/c4.png';
 
 import { useNavigate } from 'react-router-dom'; 
 import ImageSlider from "./ImageSlider";
+import { TbTruckDelivery } from "react-icons/tb";
+import { PiFarmFill } from "react-icons/pi";
+import { LuWheat } from "react-icons/lu";
+import { GiMeal } from "react-icons/gi";
+import { MdOutlineAttachMoney } from "react-icons/md";
 
 import './Home.css'; 
 
@@ -45,6 +50,31 @@ export const Home = () => {
         <p>
             Our weekly meal kits, offering 2 to 5 meals, cater to individuals and families, accommodating diverse dietary needs and preferences. Each box is thoughtfully curated with seasonal ingredients and paired with easy-to-follow recipes, simplifying meal planning and making cooking enjoyable. We believe that healthy eating should be affordable and convenient. By working directly with farmers and eliminating unnecessary middlemen, we keep our costs low, passing the savings on to you. Our balanced, portion-controlled meals make it easy to maintain a nutritious diet without overspending or wasting food. Cooking with Easy Eats is effortless and enjoyable, with step-by-step recipes that guide you in preparing delicious, gourmet dishes at home. Order your first box today and experience the freshness and quality of farm-to-table dining.
         </p>
+
+        <div className='icon-containor'>
+          <div className="icon-card">
+           <PiFarmFill className='icon-perk'/>
+            <hr/>
+            <p>Fresh, seasonal ingredients from your local farms</p>
+          </div>
+          <div className="icon-card">
+            <TbTruckDelivery className='icon-perk'/> 
+            <hr/>   
+            <p>Weekly boxes delivered straight to your door</p>        
+          </div>
+          <div className="icon-card">
+           <GiMeal className='icon-perk'/> 
+           <hr/>
+           <p>Custom dietary plans make meal prep easy</p>                      
+          </div>
+          <div className="icon-card">
+           <MdOutlineAttachMoney className='icon-perk'/> 
+           <hr/> 
+           <p>First time user discounts for affordable eating</p>  
+           <p></p>            
+          </div>
+        </div>
+
         <div style={containerStyles}>
           <ImageSlider slides={slides} />
         </div>

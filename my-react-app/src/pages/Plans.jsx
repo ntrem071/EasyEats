@@ -93,9 +93,9 @@ export const Plans = () => {
       <div className='wrap-selection'>
         <div className="lp">
           <div className="accordion">
-            <div className="accordion-item">
+          <div className="accordion-item">
               <div className="accordion-title" onClick={() => handleAccordionClick(0)}>
-                <h3>Meal Plans</h3>
+                <h3>Allergy</h3>
                 <span>{openIndexes[0] ? '-' : '+'}</span>
               </div>
               <div className={`accordion-content ${openIndexes[0] ? 'open' : ''}`}>
@@ -103,56 +103,56 @@ export const Plans = () => {
                   <label>
                     <input
                       type="checkbox"
-                      name="Vegetarian"
-                      checked={selectedOptions.checkboxes.includes('Vegetarian')}
+                      name="Dairy"
+                      checked={selectedOptions.checkboxes.includes('Dairy')}
                       onChange={handleCheckboxChange}
                     />
-                    Vegetarian
+                    Dairy
                   </label>
                   <label>
                     <input
                       type="checkbox"
-                      name="Vegan"
-                      checked={selectedOptions.checkboxes.includes('Vegan')}
+                      name="Peanut & Tree Nuts"
+                      checked={selectedOptions.checkboxes.includes('Peanut & Tree Nuts')}
                       onChange={handleCheckboxChange}
                     />
-                    Vegan
+                    Peanut & Tree Nuts
                   </label>
                   <label>
                     <input
                       type="checkbox"
-                      name="Gluten-Free"
-                      checked={selectedOptions.checkboxes.includes('Gluten-Free')}
+                      name="Shellfish"
+                      checked={selectedOptions.checkboxes.includes('Shellfish')}
                       onChange={handleCheckboxChange}
                     />
-                    Gluten-Free
+                    Shellfish
                   </label>
                   <label>
                     <input
                       type="checkbox"
-                      name="Keto"
-                      checked={selectedOptions.checkboxes.includes('Keto')}
+                      name="Fish"
+                      checked={selectedOptions.checkboxes.includes('Fish')}
                       onChange={handleCheckboxChange}
                     />
-                    Keto
+                    Fish
                   </label>
                   <label>
                     <input
                       type="checkbox"
-                      name="Paleo"
-                      checked={selectedOptions.checkboxes.includes('Paleo')}
+                      name="Soy"
+                      checked={selectedOptions.checkboxes.includes('Soy')}
                       onChange={handleCheckboxChange}
                     />
-                    Paleo
+                    Soy
                   </label>
                   <label>
                     <input
                       type="checkbox"
-                      name="Low-Carb"
-                      checked={selectedOptions.checkboxes.includes('Low-Carb')}
+                      name="Gluten"
+                      checked={selectedOptions.checkboxes.includes('Gluten')}
                       onChange={handleCheckboxChange}
                     />
-                    Low-Carb
+                    Gluten
                   </label>
                 </form>
               </div>
