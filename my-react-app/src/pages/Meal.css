@@ -10,7 +10,7 @@
   }
   
 .meal h2{
-    margin-bottom: 0;
+    margin: 0;
 }
 .rating {
     color: #ffa41c; 
@@ -23,6 +23,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: -30px;
   }
   
   .leave-review-link {
@@ -132,3 +133,22 @@
   .review-comment{
     margin: 5px 6px;
   }
+  .page-title-recipe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 1px;
+  }
+  
+  .back-arrow {
+    cursor: pointer;
+    font-size: 50px;
+    height: 80px;
+    font-weight: 500;
+
+  }
+  .back-arrow:hover{
+    color: #007bff;    
+  }
+

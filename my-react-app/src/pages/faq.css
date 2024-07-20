@@ -50,3 +50,19 @@
   .faq-item .faq-answer {
     max-height: fit-content;
   }
+
+
+.wrap-faq{
+  margin-bottom: 60px;
+}
+
+
+  .contact-form-container{
+    background-color: #fbfa92;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+
+  

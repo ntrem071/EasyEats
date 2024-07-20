@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import './Meal.css';
 
 import r1 from '../img/r1.png';
@@ -306,6 +306,11 @@ const [hoverRating, setHoverRating] = useState(0);
 const [comment, setComment] = useState('');
 const [reviews, setReviews] = useState([]);
 
+const navigate = useNavigate();
+const goBack = () => {
+  navigate(-1);
+};
+
 const openReviewPopup = () => {
   setShowReviewPopup(true);
 };
@@ -349,7 +354,10 @@ if (!recipe) {
 }
   return (
     <body className="meal">
-      <h2>{recipe.title.toUpperCase()}</h2>
+      <div className="page-title-recipe">
+        <span className="back-arrow" onClick={goBack}>&laquo; </span>
+        <h2>{recipe.title.toUpperCase()}</h2>
+      </div>
       <div className="rating-wrapper">
         <p className="rating">{recipe.rating}</p>
         <a onClick={openReviewPopup} className="leave-review-link">Leave Review</a>

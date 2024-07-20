@@ -34,13 +34,41 @@ export const Faq = () => {
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const toggleFaq = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormSubmitted(true);
+  };
+  const handleResetForm = () => {
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
+    setFormSubmitted(false);
+  };
+
   return (
     <div className="faq-container">
+      <div className='wrap-faq'>
       <h2>ASK US ANYTHING</h2>
       {faqData.map((faq, index) => (
         <div key={index} className="faq-item">
@@ -60,6 +88,106 @@ export const Faq = () => {
           )}
         </div>
       ))}
+      </div>
+      <div className="contact-form-container">
+        <h2>STILL HAVE QUESTIONS?</h2>
+
+        {formSubmitted ? (
+         <div style={{padding: "20px 10% 20px 10%" }}>
+         <p>Thank you for reaching out! We will get back to you soon.</p>
+         <button
+           onClick={handleResetForm}
+           style={{
+             backgroundColor: 'black',
+             color: 'white',
+             fontSize: '20px',
+             margin: '0',
+             borderRadius: '5px',
+             width: '100%',
+             padding: '10px',
+             border: 'solid black 1px',
+             cursor: 'pointer',
+             transition: 'background-color 0.3s, color 0.3s'
+           }}
+           onMouseOver={(e) => {
+             e.currentTarget.style.backgroundColor = '#ffa41c';
+             e.currentTarget.style.color = 'black';
+           }}
+           onMouseOut={(e) => {
+             e.currentTarget.style.backgroundColor = 'black';
+             e.currentTarget.style.color = 'white';
+           }}
+         >
+           New Submission
+         </button>
+       </div>
+        ) : (
+        <form onSubmit={handleSubmit} style={{padding: "20px 10% 20px 10%" }}>
+          <p>Fill out our contact form to get in touch with a customer representative.</p>
+          <div className="form-group" style={{ paddingBottom: "20px", margin:'0'   }}>
+            <label htmlFor="name" style={{ textAlign: "left", fontWeight: "500", display: 'block', marginBottom: '5px' }}>Enter Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder='your name'
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+              style={{ width: 'calc(100% - 18px)', padding: '8px', border: '1px solid #ccc', borderRadius: '0' }}
+            />
+          </div>
+          <div className="form-group" style={{ paddingBottom:"20px", marginBottom:'0'  }}>
+            <label htmlFor="email" style={{ textAlign: "left", fontWeight: "500", display: 'block', marginBottom: '5px' }}>Enter Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"              
+              placeholder='your email'
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+              style={{ width: 'calc(100% - 18px)', padding: '8px', border: '1px solid #ccc', borderRadius: '0' }}
+            />
+          </div>
+          <div className="form-group" style={{ paddingBottom: "20px", marginBottom:'0'    }}>
+            <label htmlFor="message" style={{ textAlign: "left", fontWeight: "500", display: 'block', marginBottom: '5px'  }}>Send Us A Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder='your message...'
+              value={formData.message}
+              onChange={handleInputChange}
+              required
+              style={{ width: 'calc(100% - 18px)', height:"100px", padding: '8px', border: '1px solid #ccc', borderRadius: '0' }}
+            />
+          </div>
+          <button
+            type="submit"
+            style={{
+              backgroundColor: 'black',
+              color: 'white',
+              fontSize: '20px',
+              borderRadius: '5px',
+              width: '100%',
+              border: 'solid black 1px',
+              cursor: 'pointer',
+              margin: '0',
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.backgroundColor = '#ffa41c';
+              e.currentTarget.style.color = 'black';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.backgroundColor = 'black';
+              e.currentTarget.style.color = 'white';
+            }}
+          >
+            Send
+          </button>
+        </form>
+        )}
+      </div>
     </div>
   );
 }
