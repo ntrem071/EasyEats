@@ -1,29 +1,35 @@
 {
   "files": {
-    "main.css": "/EasyEats/static/css/main.f1939204.css",
-    "main.js": "/EasyEats/static/js/main.ced80e8a.js",
+    "main.css": "/EasyEats/static/css/main.e500b5bb.css",
+    "main.js": "/EasyEats/static/js/main.ce6e128a.js",
     "static/js/453.ad6eb26e.chunk.js": "/EasyEats/static/js/453.ad6eb26e.chunk.js",
     "static/media/r1.png": "/EasyEats/static/media/r1.21f14672811f881924bd.png",
     "static/media/ingredients.png": "/EasyEats/static/media/ingredients.b87b5cd07e4ad59fe88b.png",
     "static/media/c3.png": "/EasyEats/static/media/c3.9cbde6ec7e4d3f9e671f.png",
     "static/media/r7.png": "/EasyEats/static/media/r7.6c2649811f89aa2885a6.png",
+    "static/media/r10.png": "/EasyEats/static/media/r10.22713240f3581295ae79.png",
     "static/media/r2.png": "/EasyEats/static/media/r2.7207318965480bc61216.png",
     "static/media/c2.png": "/EasyEats/static/media/c2.99c5cc71c0e230982fb3.png",
     "static/media/r8.png": "/EasyEats/static/media/r8.40a3695b2d5db6f4dcdb.png",
     "static/media/c4.png": "/EasyEats/static/media/c4.3d5a47f190b81ac2599c.png",
     "static/media/r5.png": "/EasyEats/static/media/r5.55de2b960bac476d2894.png",
+    "static/media/r12.png": "/EasyEats/static/media/r12.e930c6f5e7e1b0a2c3aa.png",
+    "static/media/r13.png": "/EasyEats/static/media/r13.e7157e2663eca5e4f236.png",
     "static/media/r4.png": "/EasyEats/static/media/r4.7081cd5a975931cbabcb.png",
     "static/media/r6.png": "/EasyEats/static/media/r6.f5f6e81089fcb12a4d48.png",
+    "static/media/r9.png": "/EasyEats/static/media/r9.452ab328e8517daca0be.png",
+    "static/media/r11.png": "/EasyEats/static/media/r11.47f45ddf560219e692f1.png",
     "static/media/r3.png": "/EasyEats/static/media/r3.dba8c3d3691ac23ebd89.png",
+    "static/media/r14.png": "/EasyEats/static/media/r14.0b6e6fb3ac7a938ac939.png",
     "static/media/c1.png": "/EasyEats/static/media/c1.97265501dca4bfc477e0.png",
     "static/media/1609972.png": "/EasyEats/static/media/1609972.fd149cb5b627d177090a.png",
     "index.html": "/EasyEats/index.html",
-    "main.f1939204.css.map": "/EasyEats/static/css/main.f1939204.css.map",
-    "main.ced80e8a.js.map": "/EasyEats/static/js/main.ced80e8a.js.map",
+    "main.e500b5bb.css.map": "/EasyEats/static/css/main.e500b5bb.css.map",
+    "main.ce6e128a.js.map": "/EasyEats/static/js/main.ce6e128a.js.map",
     "453.ad6eb26e.chunk.js.map": "/EasyEats/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1939204.css",
-    "static/js/main.ced80e8a.js"
+    "static/css/main.e500b5bb.css",
+    "static/js/main.ce6e128a.js"
   ]
 }
