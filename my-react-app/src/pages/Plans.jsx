@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './Plans.css';
 import { recipeCardsData } from './recipeCardsData.jsx'; 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 import { FaCheckCircle, FaHeart} from "react-icons/fa"; 
 
 
 export const Plans = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { isNewUser } = location.state || { isNewUser: false };
+
   const [openIndexes, setOpenIndexes] = useState({ 0: true, 1: true });
   const [selectedOptions, setSelectedOptions] = useState({
     checkboxes: [],
@@ -29,12 +32,12 @@ export const Plans = () => {
     let calculatedSubtotal = numberOfPeople === 4 ? mealCost * 2 : mealCost;
     setSubtotal(calculatedSubtotal);
 
-    let calculatedDiscount = calculatedSubtotal * 0.2;
+    let calculatedDiscount = isNewUser ? calculatedSubtotal * 0.2 : 0;
     setDiscount(calculatedDiscount);
 
     let calculatedTotal = calculatedSubtotal + shippingFee - calculatedDiscount;
     setTotal(calculatedTotal);
-  }, [numberOfPeople, numberOfMeals, shippingFee]);
+  }, [numberOfPeople, numberOfMeals, shippingFee, isNewUser]);
 
   const handleAccordionClick = (index) => {
     setOpenIndexes((prevIndexes) => ({
@@ -466,10 +469,12 @@ export const Plans = () => {
                     <span>Shipping</span>
                     <span className="shipping">${shippingFee.toFixed(2)}</span>
                   </li>
-                  <li>
-                    <span>Discount</span>
-                    <span className="discount">-${discount.toFixed(2)}</span>
-                  </li>
+                  {discount > 0 && (
+                    <li>
+                      <span>Discount</span>
+                      <span className="discount">-${discount.toFixed(2)}</span>
+                    </li>
+                  )}
                   <li className="total">
                     <span>Total</span>
                     <span className="charge">${total.toFixed(2)}</span>

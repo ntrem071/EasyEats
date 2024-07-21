@@ -10,7 +10,6 @@ const slideStyles = {
   position: "relative",
 };
 
-// Arrow styles
 const rightArrowStyles = {
   position: "absolute",
   top: "50%",
@@ -33,7 +32,7 @@ const leftArrowStyles = {
   cursor: "pointer",
 };
 
-// Container styles
+
 const sliderStyles = {
   position: "relative",
   height: "100%",

@@ -35,10 +35,18 @@ export const Home = () => {
           <img src={vege} width="100%" alt="Vegetable Ingredients" /> 
         </div>
         <section>
-          <h4>Get an exclusive</h4>
+          <h4>Subscribe now and get an exclusive</h4>
           <h1>20% off</h1>
           <h4>your first order!</h4>
-          <button onClick={() => navigate('/EasyEats/plan')}>Browse Plans</button>
+          <br></br>
+          <div className='ad-entry-points'>
+            <button onClick={() => navigate('/EasyEats/plan', { state: { isNewUser: true } })}>
+              New to EasyEats
+            </button>
+            <button onClick={() => navigate('/EasyEats/plan', { state: { isNewUser: false } })}>
+              Returning User
+            </button>
+          </div>
         </section>
       </div>
       <div className="body-h">
