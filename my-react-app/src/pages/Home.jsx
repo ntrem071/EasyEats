@@ -9,7 +9,6 @@ import { useNavigate } from 'react-router-dom';
 import ImageSlider from "./ImageSlider";
 import { TbTruckDelivery } from "react-icons/tb";
 import { PiFarmFill } from "react-icons/pi";
-import { LuWheat } from "react-icons/lu";
 import { GiMeal } from "react-icons/gi";
 import { MdOutlineAttachMoney } from "react-icons/md";
 
